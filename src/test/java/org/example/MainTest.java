@@ -1,22 +1,16 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MainTest {
     @Test
-    public void StudentManager() {
-    manager =new
+    public void testing() {
+Person person = new Person(); // ("Jenny", 74, 12345);
+int sentence = person.greet("Hello, my name is " + name + " and I am " + age + " years old.");
+assertEquals();
 
-    StudentManager();
 
-    Student addedStudent = manager.findStudentByName("John Doe");
-
-    assertEquals("John Doe",addedStudent.getName());
-
-    assertEquals(85.5,addedStudent.getGrade());
-
-    assertEquals(2,addedStudent.getDaysAbsent());
-}
+    }
 
 }

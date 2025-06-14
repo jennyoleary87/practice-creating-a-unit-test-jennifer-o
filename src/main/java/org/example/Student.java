@@ -1,51 +1,19 @@
 package org.example;
 
-public class Student {
-    private String name;
-    private double grade;
-    private int daysAbsent;
+// inheriting name and age from Person
+public class Student extends Person{
+    public int studentId;
 
-    public Student(String name, double grade, int daysAbsent) {
-        this.name = name;
-        this.grade = grade;
-        this.daysAbsent = daysAbsent;
+    // add constructor that calls Person constructor
+    // call parent using "super"
+    public Student(String name, int age, int studentId) {
+        super(name, age);
+        // super("",6);
+        this.studentId = studentId;
+        this.address = "123 Main St";
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public double getGrade() {
-        return grade;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setGrade(double grade) {
-        this.grade = grade;
-    }
-
-    public int getDaysAbsent() {
-        return daysAbsent;
-    }
-
-    public void setDaysAbsent(int daysAbsent) {
-        this.daysAbsent = daysAbsent;
-    }
-
-    public String toString() {
-        return name + " " + grade;
-    }
-
-    // Add a void method called addAbsence that increments the daysAbsent field by 1.
-    public void addAbsence() {
-        this.daysAbsent++;
-    }
-
-    // Add a void method called addBonusPoints that takes a double parameter bonusPoints and adds it to the grade field.
-    public void addBonusPoints(double bonusPoints) {
-        this.grade += bonusPoints;
+    public void greet() {
+        System.out.println("Hello, my name is " + name + " and I am " + age + " years old. My student ID is " + studentId + ".");
     }
 }
